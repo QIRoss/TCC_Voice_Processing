@@ -8,12 +8,12 @@ def audio_to_text(audio_file):
 
     try:
         text = recognizer.recognize_sphinx(audio_data)
-        print("Text from audio: {}".format(text))
+        return "Text from audio: {}".format(text)
     except sr.UnknownValueError:
-        print("PocketSphinx could not understand audio")
+        return "PocketSphinx could not understand audio"
     except sr.RequestError as e:
-        print("Error with PocketSphinx recognizer; {0}".format(e))
+        return "Error with PocketSphinx recognizer; {0}".format(e)
 
 if __name__ == "__main__":
     audio_file_path = "audios/blood_loss_transfusion.wav"
-    audio_to_text(audio_file_path)
+    print(audio_to_text(audio_file_path))
