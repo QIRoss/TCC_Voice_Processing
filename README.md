@@ -7,5 +7,5 @@ curl -X POST -F "file=@/home/qiross/code/TCC/TCC_Voice_Processing/audios/smoke_i
 
 ```
 docker build -t voice_api_image .
-docker run -p 5000:5000 --name voice_processing_api voice_api_image
+docker run --name voice_processing_api -d -p 5000:5000 --network host voice_api_image
 ```
