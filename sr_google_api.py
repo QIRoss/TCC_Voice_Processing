@@ -15,5 +15,5 @@ def audio_to_text(audio_file):
         return "Could not request results from Google Speech Recognition service; {0}".format(e)
 
 if __name__ == "__main__":
-    audio_file_path = "audios/smoke_inhalation_respiratory_distress.wav"
+    audio_file_path = "audios/blood_loss_transfusion.wav"
     print(audio_to_text(audio_file_path))
