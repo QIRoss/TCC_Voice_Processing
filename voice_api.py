@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
-from sr_google_api import audio_to_text
-# from sr_pocketsphinx import audio_to_text
+#from sr_google_api import audio_to_text
+from sr_pocketsphinx import audio_to_text
 # from torch_librosa_example import audio_to_text
 
 voice_api = Flask(__name__)
